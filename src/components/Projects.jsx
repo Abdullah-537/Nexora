@@ -16,7 +16,7 @@ const projects = [
     title: 'eBay Store Success',
     category: 'eCommerce',
     desc: 'Our graduates running profitable eBay stores with optimized listings and global reach.',
-    image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45a?q=80&w=2070&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1563013544-824ae1b76f68?q=80&w=2070&auto=format&fit=crop',
     span: 'md:col-span-1 md:row-span-1'
   },
   {
@@ -32,7 +32,7 @@ const projects = [
     title: 'AI Video Production',
     category: 'AI Tools',
     desc: 'Students creating viral marketing content using cutting-edge AI video and animation tools.',
-    image: 'https://images.unsplash.com/photo-1574717024653-61fd218a8e8d?q=80&w=2070&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1536240478700-b869070f9279?q=80&w=2070&auto=format&fit=crop',
     span: 'md:col-span-1 md:row-span-1'
   },
   {
@@ -48,7 +48,7 @@ const projects = [
     title: 'Graduate Success Stories',
     category: 'Results',
     desc: 'From zero to earning — our graduates share their journey to financial independence.',
-    image: 'https://images.unsplash.com/photo-1523580498543-136e155f6d76?q=80&w=2070&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2070&auto=format&fit=crop',
     span: 'md:col-span-2 md:row-span-1'
   }
 ];
@@ -93,14 +93,17 @@ export default function Projects() {
             onClick={() => setSelected(project)}
           >
             {/* Image */}
-            <img 
-              src={project.image} 
-              alt={project.title}
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-            />
+            <div className="absolute inset-0 bg-[#0a1628]">
+              <img 
+                src={project.image} 
+                alt={project.title}
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-90"
+                loading={index < 3 ? "eager" : "lazy"}
+              />
+            </div>
 
-            {/* Default Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[rgba(3,11,24,0.8)] via-[rgba(3,11,24,0.2)] to-transparent transition-opacity duration-500" />
+            {/* Default Overlay - Lighter */}
+            <div className="absolute inset-0 bg-gradient-to-t from-[rgba(3,11,24,0.75)] via-[rgba(3,11,24,0.15)] to-transparent transition-opacity duration-500" />
 
             {/* Hover Overlay */}
             <div className="absolute inset-0 bg-[rgba(3,11,24,0.85)] opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
