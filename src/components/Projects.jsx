@@ -16,7 +16,7 @@ const projects = [
     title: 'eBay Store Success',
     category: 'eCommerce',
     desc: 'Our graduates running profitable eBay stores with optimized listings and global reach.',
-    image: 'https://images.unsplash.com/photo-1563013544-824ae1b76f68?q=80&w=2070&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1556742044-3c52d6c88a62?q=80&w=2070&auto=format&fit=crop',
     span: 'md:col-span-1 md:row-span-1'
   },
   {
@@ -32,7 +32,7 @@ const projects = [
     title: 'AI Video Production',
     category: 'AI Tools',
     desc: 'Students creating viral marketing content using cutting-edge AI video and animation tools.',
-    image: 'https://images.unsplash.com/photo-1536240478700-b869070f9279?q=80&w=2070&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?q=80&w=2070&auto=format&fit=crop',
     span: 'md:col-span-1 md:row-span-1'
   },
   {
