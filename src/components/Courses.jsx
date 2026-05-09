@@ -8,7 +8,7 @@ const courses = [
     icon: <ShoppingCart size={28} className="text-accent1" />,
     title: 'eBay Business Training',
     desc: 'Master product research, listing optimization, and store scaling. Build a profitable eBay business from scratch with proven strategies.',
-    image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45a?q=80&w=2070&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1563013544-824ae1b76f68?q=80&w=2070&auto=format&fit=crop',
     duration: '8 Weeks',
     level: 'Beginner to Pro',
     tag: 'Best Seller',
@@ -41,7 +41,7 @@ const courses = [
     icon: <Video size={28} className="text-accent1" />,
     title: 'AI Video & Animation',
     desc: 'Create stunning AI-generated content and viral marketing videos using cutting-edge AI tools and animation techniques.',
-    image: 'https://images.unsplash.com/photo-1574717024653-61fd218a8e8d?q=80&w=2070&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1536240478700-b869070f9279?q=80&w=2070&auto=format&fit=crop',
     duration: '8 Weeks',
     level: 'Beginner',
     tag: 'New',
@@ -63,7 +63,7 @@ const courses = [
     icon: <GraduationCap size={28} className="text-accent1" />,
     title: 'Digital Marketing Mastery',
     desc: 'From SEO to paid ads, master the full digital marketing stack. Drive traffic, generate leads, and scale revenue.',
-    image: 'https://images.unsplash.com/photo-1531482615741-6823a6a9db12?q=80&w=2070&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop',
     duration: '10 Weeks',
     level: 'Intermediate',
     tag: 'Comprehensive',
@@ -114,18 +114,18 @@ export default function Courses() {
             {/* Card height */}
             <div className={`relative ${course.featured ? 'h-[400px] md:h-full min-h-[500px]' : 'h-[400px]'}`}>
               {/* Hero Image */}
-              <div className="absolute inset-0 z-0">
+              <div className="absolute inset-0 z-0 bg-[#0a1628]">
                 <img 
                   src={course.image} 
                   alt={course.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-60 group-hover:opacity-80"
+                  loading={index < 3 ? "eager" : "lazy"}
                 />
               </div>
 
-              {/* Gradient Overlays */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[rgba(3,11,24,0.95)] via-[rgba(3,11,24,0.55)] to-[rgba(3,11,24,0.15)] z-[1]" />
-              <div className="absolute inset-0 bg-accent1 opacity-0 group-hover:opacity-[0.06] transition-opacity duration-500 z-[2]" />
+              {/* Gradient Overlays - Lighter to show images */}
+              <div className="absolute inset-0 bg-gradient-to-t from-[rgba(3,11,24,0.90)] via-[rgba(3,11,24,0.40)] to-[rgba(3,11,24,0.10)] z-[1]" />
+              <div className="absolute inset-0 bg-accent1 opacity-0 group-hover:opacity-[0.05] transition-opacity duration-500 z-[2]" />
 
               {/* Top Row: Tag + Number */}
               <div className="absolute top-5 left-6 right-6 z-10 flex items-center justify-between">
